@@ -262,6 +262,11 @@ div.plateImage p {
   margin-right: 28px;
 }
 
+.creative-commons {
+  display: inline-block;
+  margin: 0px;
+}
+
 .noscript {
   text-align : center;
   position : fixed;
