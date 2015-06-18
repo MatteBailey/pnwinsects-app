@@ -136,7 +136,7 @@ def counties_list(value):
     
     for state in states:
         html += "\t<optgroup label=\"" + str(state) + "\" class=\"countySel " + str(state) + "\">\n"
-        counties = set(SpeciesRecord.records.filter(county__state__code=str(state)).exclude(county__name=None).values_list("county__name", flat=True))
+        counties = set(SpeciesRecord.objects.filter(county__state__code=str(state)).exclude(county__name=None).values_list("county__name", flat=True))
         counties = sorted(counties)
 
         for county in counties:
@@ -152,7 +152,7 @@ def loc_class(value):
     """
     genus, species = value.rsplit(" ", 1)
 
-    q1 = SpeciesRecord.records.filter(species__genus=genus)
+    q1 = SpeciesRecord.objects.filter(species__genus=genus)
 
     states = set(q1.filter(species__species=species).exclude(state__code=None).values_list("state__code", flat=True))
 
