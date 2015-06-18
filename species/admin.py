@@ -7,6 +7,7 @@ from sorl.thumbnail import get_thumbnail
 from ajax_select import make_ajax_form
 from ajax_select.admin import AjaxSelectAdmin
 from django.core import urlresolvers
+from django.utils.safestring import mark_safe
 from cms.admin.placeholderadmin import PlaceholderAdmin
 from cms.admin.pageadmin import PageAdmin
 from cms.models.pagemodel import Page
@@ -88,6 +89,10 @@ class SpeciesImageAdmin(VersionAdmin, AjaxSelectAdmin, AdminImageMixin, admin.Mo
             return "Yes"
         return "No"
     published.admin_order_field = 'species__id'
+    
+    def record_link(self, instance):
+        return mark_safe('<a href="../../speciesrecord/%s">%s</a>' % (instance.record.id, instance.record))
+    record_link.short_description = "Label link"
 
     list_display = (
         published,
@@ -101,7 +106,8 @@ class SpeciesImageAdmin(VersionAdmin, AjaxSelectAdmin, AdminImageMixin, admin.Mo
     list_editable = ("weight",)
     search_fields = ("species__genus", "species__species", "image")
     raw_id_fields = ("record",)
-    
+    readonly_fields = ('record_link',)
+
     def save_model(self, request, obj, form, change):
         obj.save()
     
