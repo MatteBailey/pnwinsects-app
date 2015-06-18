@@ -111,7 +111,7 @@ def states_list(value):
     """
     Returns html for populating state multiselect box
     """
-    states = set(SpeciesRecord.records.all().exclude(state__code=None).values_list("state__code", flat=True))
+    states = set(SpeciesRecord.objects.all().exclude(state__code=None).values_list("state__code", flat=True))
 
     states = sorted(states)
 
@@ -128,7 +128,7 @@ def counties_list(value):
     """
     Returns html for populating county multiselect box
     """
-    states = set(SpeciesRecord.records.all().exclude(state__code=None).values_list("state__code", flat=True))
+    states = set(SpeciesRecord.objects.all().exclude(state__code=None).values_list("state__code", flat=True))
 
     states = sorted(states)
 
