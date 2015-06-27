@@ -14,8 +14,8 @@ Starting a new site
   * mod_wsgi
   * MySQL (other databases are possible but untested)
   * pip package mananager
-    * install the python modules found in requirements.txt in this repo
-    * <code>pip install -r requirements.txt</code>
+    * Install the python modules found in <code>requirements.txt</code> in this repo:
+    	* <code>pip install -r requirements.txt</code>
 * Instructions for configuring Apache and your database can be found at:
 	* https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/modwsgi/
 	* https://docs.djangoproject.com/en/1.8/topics/install/#database-installation
