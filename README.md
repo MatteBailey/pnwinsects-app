@@ -10,7 +10,7 @@ Starting a new site
 
 * The following components must be installed in the environment in which the site will run:
   * Apache (using other server software is possible, but we have only tested with Apache)
-  * Python
+  * Python 2.7
   * mod_wsgi
   * MySQL
   * pip package mananager
