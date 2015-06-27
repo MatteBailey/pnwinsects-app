@@ -12,11 +12,13 @@ Starting a new site
   * Apache (using other server software is possible, but we have only tested with Apache)
   * Python 2.7
   * mod_wsgi
-  * MySQL
+  * MySQL (other databases are possible but untested)
   * pip package mananager
     * install the python modules found in requirements.txt in this repo
     * <code>pip install -r requirements.txt</code>
-* Instructions for configuring Apache for Django can be found at https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/modwsgi/
+* Instructions for configuring Apache and your database can be found at:
+	* https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/modwsgi/
+	* https://docs.djangoproject.com/en/1.8/topics/install/#database-installation
 * The site code can be installed with <code>git clone git@github.com:MatteBailey/pnwinsects-app.git</code>
 * <code>settings.py</code> and <code>apache.conf</code> are specific to the installation, and should be symlinked from the parent directory
 
