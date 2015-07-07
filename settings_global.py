@@ -171,7 +171,7 @@ CMS_LANGUAGE_DEFAULT = 'en'
 # django-haystack
 HAYSTACK_XAPIAN_PATH = os.path.join(PROJECT_ROOT, "site_index")
 HAYSTACK_SITECONF = "search_sites"
-HAYSTACK_SEARCH_ENGINE = "xapian"
+HAYSTACK_SEARCH_ENGINE = "dummy"
 #HAYSTACK_ENABLE_REGISTRATIONS = False
 
 FILE_UPLOAD_HANDLERS = ("django.core.files.uploadhandler.TemporaryFileUploadHandler",
