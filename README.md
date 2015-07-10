@@ -21,6 +21,11 @@ Starting a new site
 	* https://docs.djangoproject.com/en/1.8/topics/install/#database-installation
 * The site code can be installed with <code>git clone git@github.com:MatteBailey/pnwinsects-app.git</code>
 * <code>settings.py</code> and <code>apache.conf</code> are specific to the installation, and should be symlinked from the parent directory
+* After installing all the necessary components, setting up the database, and configuring settings, the following commands should be run in this order to prepare Django
+	* <code>manage.py schemamigration species --initial</code>
+	* <code>manage.py syncdb</code>
+		* You will be prompted to create an admin user at this point, and should do so
+	* <code>manage.py migrate</code>
 
 Example settings.py
 -------------------
