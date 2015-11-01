@@ -225,10 +225,10 @@ PNWMOTHS.Map = function () {
                     // Build a list of markers for the given data. Data is indexed by a
                     // latitude/longitude tuple so i[0] is latitude and i[1] is
                     // longitude.
-                    for (i in data) {
-                        if (data.hasOwnProperty(i)) {
+                    for (var i=0; i<data.length; i++) {
+                        if (data.hasOwnProperty(i) && data[i].latitude !== null && data[i].longitude !== null) {
                             point = new google.maps.LatLng(data[i].latitude, data[i].longitude);
-                            /**
+                            /**s
                              * marker variable, stores all of the information pertaining to a specific marker
                              * this variable creates the marker, places it on the map and then also sets some
                              * custom options for the infoBubbles.
