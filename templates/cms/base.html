@@ -100,14 +100,16 @@
 			<script type="text/javascript"> 
 			  google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});
 			  google.setOnLoadCallback(function() {
-			    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
-			      '017156112814786239348:qfcdc7npqre', customSearchOptions);
-			    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-			    var options = new google.search.DrawOptions();
-			    options.enableSearchboxOnly("http://pnw{{ SPECIES_PLURAL }}.biol.wwu.edu/gsearch/");
-			    customSearchControl.draw('cse-search-form', options);
+				var cx = '017156112814786239348:qfcdc7npqre';
+				var gcse = document.createElement('script');
+			 	gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);	
 			  }, true);
 			</script>
+			<gcse:searchbox-only></gcse:searchbox-only>
 		{% endif %}
 		{% else %}
                     <form method="get" action="/search/">
