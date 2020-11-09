@@ -88,36 +88,8 @@
 		      <h1 id="header-text">Pacific Northwest <span id="header-green">{{ SPECIES_PLURAL|capfirst }}</span></h1>
               </div>
               <div class="col_4 last">  
-		{% if user.username == "static-site-generator" %}
-		{% if not GOOGLE_SEARCH %}
-                    <form method="get" action="/gsearch/">
-                        <input type="text" name="q" id="search_box" class="inputBox" />          
-                        <input type="submit" value="search" id="search_button" class="submitButton" />
-                    </form>
-	        {% else %}
-			<div id="cse-search-form" style="width: 100%;">Loading</div>
-			<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-			<script type="text/javascript"> 
-			  google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});
-			  google.setOnLoadCallback(function() {
-				var cx = '017156112814786239348:qfcdc7npqre';
-				var gcse = document.createElement('script');
-			 	gcse.type = 'text/javascript';
-				gcse.async = true;
-				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(gcse, s);	
-			  }, true);
-			</script>
-			<gcse:searchbox-only></gcse:searchbox-only>
-		{% endif %}
-		{% else %}
-                    <form method="get" action="/search/">
-                        <input type="text" name="q" id="search_box" class="inputBox" />          
-                        <input type="submit" value="search" id="search_button" class="submitButton" />
-                    </form>
-		{% endif %}
-              </div>
+				<script async src="https://cse.google.com/cse.js?cx=5d96e4ce1c38c9724"></script>
+				<div class="gcse-search"></div>
             </div>
           </div>
           <div id="header_bottom" class="row">
