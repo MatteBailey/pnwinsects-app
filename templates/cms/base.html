@@ -1,9 +1,9 @@
 {% load cache cms_tags menu_tags sekizai_tags %}
-<!doctype html>  
+<!doctype html>
 <!--[if lt IE 7 ]> <html lang="en-us" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en-us" class="no-js ie9"> <![endif]-->   
+<!--[if IE 9 ]>    <html lang="en-us" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" >
@@ -11,9 +11,9 @@
 
   <title>PNW {{ SPECIES_PLURAL|capfirst }} | {% block title %}{% page_attribute page_title %}{% endblock %}</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.ico"/>
-  
+
     {% block stylesheets %}
         <!-- The Columnal Grid (1140px wide base, load first), Type and image presets, and mobile stylesheet -->
         <link rel="stylesheet" href="{{ MEDIA_URL }}css/columnal.css" type="text/css" media="screen" />
@@ -35,7 +35,7 @@
                 <![endif]-->
         <!-- End fixes for IE -->
 
-        <!-- Customizations here --> 
+        <!-- Customizations here -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ MEDIA_URL }}css/custom.css" type="text/css" media="screen" />
@@ -87,9 +87,10 @@
               <div class="col_8">
 		      <h1 id="header-text">Pacific Northwest <span id="header-green">{{ SPECIES_PLURAL|capfirst }}</span></h1>
               </div>
-              <div class="col_4 last">  
-				<script async src="https://cse.google.com/cse.js?cx=5d96e4ce1c38c9724"></script>
-				<div class="gcse-search"></div>
+              <div class="col_4 last">
+                <script async src="https://cse.google.com/cse.js?cx=5d96e4ce1c38c9724"></script>
+                <div class="gcse-search"></div>
+              </div>
             </div>
           </div>
           <div id="header_bottom" class="row">
